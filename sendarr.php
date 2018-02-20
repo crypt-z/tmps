@@ -1,13 +1,13 @@
 <?php
 
-     error_reporting(E_ALL);
-     ini_set( 'display_errors', 1);
-     ini_set( 'display_startup_errors', 1);	   
+  error_reporting(E_ALL);
+          ini_set( 'display_errors', 1);
+          ini_set( 'display_startup_errors', 1);	   
  require_once 'SendRequest.php';
-    $This = (
+         $This = (
  new SendRequest ( $url ) )
-	->  headers  ( $headers )
-	->  post     ( [ 
+    ->  headers  ( $headers )
+    ->  post     ( [ 
 
       "var_A" => array("A1", "A2", "A3"), 
       "var_B" => array("B1", "B2", "B3"), 
