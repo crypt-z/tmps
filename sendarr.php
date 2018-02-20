@@ -1,11 +1,11 @@
 <?php
 
- require_once 'SendRequest.php';
-     error_reporting(E_ALL);
-     ini_set( 'display_errors', 1);
-     ini_set( 'display_startup_errors', 1);	    
-    $This = (
- new SendRequest ( $url ) )
+     require_once'SendRequest.php';
+error_reporting(E_ALL);
+        ini_set( 'display_errors', 1);
+        ini_set( 'display_startup_errors', 1);	    
+       $This = (
+new SendRequest( $url ) )
 	->  headers  ( $headers )
 	->  post     ( [ 
 
@@ -15,7 +15,7 @@
       "var_D" => array("D1", "D2", "D3"), 
       "var_E" => array("E1", "E2", "E3"),
       "var_F" => array("F1", "F2", "F3"), 
-	  "var_G" => array("G1", "G2", "G3"),
+      "var_G" => array("G1", "G2", "G3"),
 	  
     ] );
 		print_r ($This) .
