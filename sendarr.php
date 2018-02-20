@@ -1,34 +1,23 @@
 <?php
 
+     error_reporting(E_ALL);
+     ini_set( 'display_errors', 1);
+     ini_set( 'display_startup_errors', 1);	   
+ require_once 'SendRequest.php';
+    $This = (
+ new SendRequest ( $url ) )
+	->  headers  ( $headers )
+	->  post     ( [ 
 
-
-       error_reporting(E_ALL);
-       ini_set('display_errors', 1);
-       ini_set('display_startup_errors', 1);	   
-       require_once 'SendRequest.php';
-     
-       $test = (
-		  new SendRequest ( $url ))
-		   -> headers ( $headers )
-		   -> post ([ 
-       
-       "Key"  => array("iPhone5", "iPhone5s", "iPhone6") ,
-     
-       "Gen"  => array("iPhone5", "iPhone5s", "iPhone6") ,
-       
-       "Byte" => array("iPhone5", "iPhone5s", "iPhone6") ,
-     
-       "apple"=> array("iPhone5", "iPhone5s", "iPhone6") ,
-     
-       "samsumg"=> array("Samsung Galaxy III", "Samsung Galaxy ACE II"),
-   
-       "nokia" => array("Nokia N9", "Nokia Lumia 930"),
-     
-       "sony" => array("Sony XPeria Z3", "Xperia Z3 Dual", "Xperia T2 Ultra"),
-     
-	  ]) ;
-    
-		 print_r ($test).'<br>' ;
- 
-
-?>
+      "var_A" => array("A1", "A2", "A3"), 
+      "var_B" => array("B1", "B2", "B3"), 
+      "var_C" => array("C1", "C2", "C3"), 
+      "var_D" => array("D1", "D2", "D3"), 
+      "var_E" => array("E1", "E2", "E3"),
+      "var_F" => array("F1", "F2", "F3"), 
+      "var_G" => array("G1", "G2", "G3"),
+	  
+    ] );
+		print_r ($This) .
+			'<br> ' ;
+		?>
